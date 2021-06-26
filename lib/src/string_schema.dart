@@ -25,5 +25,6 @@ class StringSchema extends Schema {
   final num? maxLength;
   final String? pattern;
 
-  const StringSchema({this.maxLength, this.minLength, this.pattern});
+  const StringSchema({this.maxLength, this.minLength, this.pattern})
+      : super(SchemaTypes.string);
 }
