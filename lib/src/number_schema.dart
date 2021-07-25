@@ -14,5 +14,7 @@ class NumberSchema extends Schema {
     this.exclusiveMinimum,
     this.maximum,
     this.minimum,
-  }) : super(SchemaTypes.number);
+  })  : assert(exclusiveMaximum == null || maximum == null),
+        assert(exclusiveMinimum == null || minimum == null),
+        super(SchemaTypes.number);
 }
